@@ -23,4 +23,6 @@ urlpatterns = [
     path('api/auth/profile/', UserProfileView.as_view(), name='user-profile'),
     path('api/auth/logout/', LogoutView.as_view(), name='logout'),
     path('api/', include(router.urls)),
+    path("api/posts/<int:pk>/like/", LikePostView.as_view(), name="like-post"),
+    
 ]
